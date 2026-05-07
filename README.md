@@ -14,7 +14,7 @@ valora/
 │   ├── main.js                 # ⭐ Ponto de entrada — inicializa tudo
 │   │
 │   ├── data/                   # Dados do catálogo
-│   │   ├── fotos.js            # 5 fotos em base64 (enviadas pela equipe)
+│   │   ├── fotos.js            # 5 fotos da pasta images
 │   │   ├── aves.js             # Catálogo das 5 aves + funções de status
 │   │   └── trilhas.js          # 3 trilhas + 15 questões de quiz
 │   │
@@ -46,18 +46,18 @@ valora/
 ### Opção 1 — Live Server (recomendado)
 1. Instalar extensão **Live Server** no VS Code
 2. Clicar com botão direito em `index.html` → **"Open with Live Server"**
-3. Acessar `http://127.0.0.1:5500`
+3. Acessar `https://valorateste.netlify.app/`
 
 ### Opção 2 — Python
 ```bash
 python3 -m http.server 8080
-# Acessar: http://localhost:8080
+# Acessar: https://valorateste.netlify.app/
 ```
 
 ### Opção 3 — Node.js
 ```bash
 npx serve .
-# Acessar: http://localhost:3000
+# Acessar: https://valorateste.netlify.app/
 ```
 
 > ⚠️ **Importante:** Abrir `index.html` diretamente no browser (file://) **não funciona**
