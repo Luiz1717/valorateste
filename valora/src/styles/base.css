@@ -1,0 +1,247 @@
+/* ============================================================
+   MÓDULO: styles/base.css
+   Reset, base e utilitários globais
+   ============================================================ */
+
+/* ── Reset ── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-base);
+  color: var(--tx);
+  background: var(--cr);
+  max-width: var(--max-w);
+  margin: 0 auto;
+  overflow-x: hidden;
+  min-height: 100%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input, textarea {
+  font-family: var(--font-sans);
+  outline: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ── Sistema de Views (SPA) ── */
+.view {
+  display: none !important;
+}
+.view.on {
+  display: block !important;
+}
+
+/* ── Seções ── */
+.sec {
+  padding: var(--gap-section) var(--gap-lg);
+}
+
+.sec-lbl {
+  font-size: var(--fs-xs);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--vf);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sec-lbl::before {
+  content: '';
+  width: 22px;
+  height: 1px;
+  background: var(--vf);
+  flex-shrink: 0;
+}
+
+.sec-title {
+  font-family: var(--font-serif);
+  font-size: var(--fs-2xl);
+  line-height: 1.2;
+  color: var(--vm);
+  margin-bottom: 16px;
+}
+
+.sec-title em {
+  font-style: italic;
+  color: var(--vf);
+}
+
+/* Variantes para seções escuras */
+.sec-dark .sec-lbl {
+  color: var(--vb);
+}
+.sec-dark .sec-lbl::before {
+  background: var(--vb);
+}
+.sec-dark .sec-title {
+  color: var(--cr);
+}
+.sec-dark .sec-title em {
+  color: var(--vb);
+}
+
+/* ── Chips / Tags ── */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-xs);
+}
+
+.chip {
+  background: var(--ar);
+  color: var(--vm);
+  border-radius: var(--r-full);
+  padding: 6px 14px;
+  font-size: var(--fs-sm);
+  font-weight: 500;
+}
+
+/* ── Botões ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: var(--r-pill);
+  font-size: var(--fs-base);
+  font-weight: 600;
+  transition: transform var(--t-base), opacity var(--t-base);
+  cursor: pointer;
+  border: none;
+}
+
+.btn:active {
+  transform: scale(.96);
+}
+
+.btn-primary {
+  background: var(--vc);
+  color: #fff;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: rgba(242,237,224,.65);
+  border: 1.5px solid rgba(242,237,224,.28);
+}
+
+.btn-dark {
+  background: var(--vm);
+  color: var(--cr);
+}
+
+.btn-accent {
+  background: var(--vb);
+  color: var(--vm);
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* ── Toast ── */
+.toast {
+  position: fixed;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--vm);
+  color: var(--cr);
+  padding: 11px 22px;
+  border-radius: var(--r-pill);
+  font-size: 13px;
+  font-weight: 500;
+  z-index: 500;
+  opacity: 0;
+  transition: opacity .3s, transform .3s;
+  pointer-events: none;
+  white-space: nowrap;
+  box-shadow: var(--shadow-lg);
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ── Animação de Entrada (Scroll Fade-In) ── */
+.fi {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .5s ease, transform .5s ease;
+}
+
+.fi.vis {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Overlay / Modal base ── */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background: rgba(18,30,20,.88);
+  display: none;
+  align-items: flex-end;
+  justify-content: center;
+  backdrop-filter: blur(6px);
+}
+
+.overlay.on {
+  display: flex;
+}
+
+/* ── Keyframes globais ── */
+@keyframes slideup {
+  from { transform: translateY(48px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+@keyframes fadeup {
+  from { transform: translateY(16px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(7px); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: .25; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

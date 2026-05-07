@@ -1,0 +1,71 @@
+/* ============================================================
+   MÓDULO: styles/variables.css
+   Design Tokens — Projeto VALORA · Aves & Trilhas
+   Paleta inspirada na natureza brasileira
+   ============================================================ */
+
+:root {
+  /* ── Paleta Verde Floresta ── */
+  --vm: #1E3320;   /* verde musgo escuro — fundo principal, hero, cards dark */
+  --vf: #2E5C30;   /* verde floresta — secundário, labels, bordas */
+  --vc: #5A9048;   /* verde cerrado — botões primários, barras de nível fácil */
+  --vb: #82C060;   /* verde broto — accent, destaque, texto sobre fundo escuro */
+
+  /* ── Paleta Terra ── */
+  --cr: #F2EDE0;   /* creme — background principal da página */
+  --ar: #E0D4B8;   /* areia — cards secundários, chips, modal-facts */
+  --te: #7A4E28;   /* terra — nível difícil, elementos quentes */
+  --do: #B8902E;   /* dourado — nível médio, badge VALORA, destaque */
+
+  /* ── Texto e Utilitários ── */
+  --tx: #18281A;   /* texto principal — máximo contraste */
+  --br: #FAFAF4;   /* branco quente — cards claros */
+  --err: #B03020;  /* vermelho — erros, alertas críticos, status CR */
+  --ok: #228844;   /* verde — sucesso, confirmação, status LC */
+
+  /* ── Tipografia ── */
+  --font-serif: 'Lora', Georgia, serif;
+  --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Courier New', Courier, monospace;
+
+  /* ── Tamanhos de fonte ── */
+  --fs-xs: 10px;
+  --fs-sm: 12px;
+  --fs-base: 14px;
+  --fs-md: 16px;
+  --fs-lg: 20px;
+  --fs-xl: 24px;
+  --fs-2xl: 30px;
+  --fs-3xl: 42px;
+  --fs-4xl: 52px;
+
+  /* ── Bordas arredondadas ── */
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 18px;
+  --r-xl: 24px;
+  --r-pill: 50px;
+  --r-full: 9999px;
+
+  /* ── Sombras ── */
+  --shadow-sm: 0 2px 8px rgba(24,40,26,.08);
+  --shadow-md: 0 3px 16px rgba(24,40,26,.12);
+  --shadow-lg: 0 8px 32px rgba(24,40,26,.16);
+
+  /* ── Transições ── */
+  --t-fast: .15s ease;
+  --t-base: .2s ease;
+  --t-slow: .35s ease;
+
+  /* ── Espaçamento ── */
+  --gap-xs: 6px;
+  --gap-sm: 10px;
+  --gap-md: 14px;
+  --gap-lg: 22px;
+  --gap-xl: 32px;
+  --gap-section: 54px;
+
+  /* ── Layout ── */
+  --max-w: 430px;       /* largura máxima mobile */
+  --nav-h: 72px;        /* altura da bottom nav */
+}
